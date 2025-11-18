@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГраффитиВолна 2025 - Фестиваль уличного искусства</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --orange: #FF6B35;
+            --green: #2E8B57;
+            --blue: #1E90FF;
+            --white: #FFFFFF;
+            --dark: #333333;
+            --light-gray: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--orange);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: var(--orange);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #e05a2b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: var(--blue);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: #1a7fdd;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(30, 144, 255, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--dark);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--orange);
+        }
+
+        .logo span {
+            color: var(--blue);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 30px;
+        }
+
+        .nav-menu a {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .nav-menu a:hover {
+            color: var(--orange);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        /* Hero Banner */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .date-place {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .about-img {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Program */
+        .program-day {
+            margin-bottom: 40px;
+        }
+
+        .program-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .program-table th {
+            background-color: var(--orange);
+            color: var(--white);
+            padding: 15px;
+            text-align: left;
+        }
+
+        .program-table td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .program-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .program-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Participants */
+        .participants-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .participant-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .participant-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .participant-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .participant-info {
+            padding: 20px;
+        }
+
+        .participant-info h3 {
+            margin-bottom: 10px;
+            color: var(--blue);
+        }
+
+        .view-all {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Contacts */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--orange);
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--blue);
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: var(--orange);
+            transform: translateY(-3px);
+        }
+
+        .map-placeholder {
+            background-color: #ddd;
+            height: 300px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
+            margin-left: 20px;
+        }
+
+        .footer-links a:hover {
+            color: var(--orange);
+        }
+
+        .back-to-top {
+            background-color: var(--orange);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: #e05a2b;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1023px) {
+            .participants-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .about-content, .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-images {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 767px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .header-container {
+                padding: 15px;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .participants-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .program-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                margin-top: 20px;
+            }
+            
+            .footer-links a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Граффити<span>Волна</span></a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#about">О фестивале</a></li>
+                <li><a href="#program">Программа</a></li>
+                <li><a href="#participants">Участники</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#" class="btn btn-primary">Принять участие</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>ГраффитиВолна 2025</h1>
+            <p>Фестиваль уличного искусства в сердце города</p>
+            <div class="date-place">15–17 августа 2025, Парк Культуры</div>
+            <a href="#program" class="btn btn-outline">Узнать подробности</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>О фестивале</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>ГраффитиВолна — это ежегодный фестиваль уличного искусства, который объединяет талантливых художников, музыкантов и всех ценителей современной культуры. Наша миссия — превратить городские пространства в галереи под открытым небом, создавая уникальную атмосферу творчества и самовыражения.</p>
+                    <p>Фестиваль был основан в 2018 году группой энтузиастов, которые верили в силу искусства как инструмента преобразования городской среды. За эти годы мероприятие выросло из локальной инициативы в масштабное событие, привлекающее тысячи посетителей.</p>
+                    <p>В 2025 году мы готовим для вас еще более насыщенную программу: живые выступления, мастер-классы от известных художников, арт-маркет и, конечно, создание масштабных граффити в реальном времени. Присоединяйтесь к нашему творческому сообществу!</p>
+                </div>
+                <div class="about-images">
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Граффити с прошлого фестиваля">
+                    </div>
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01988a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Участники фестиваля">
+                    </div>
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Творческий процесс">
+                    </div>
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Готовые работы">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program">
+        <div class="container">
+            <h2>Программа фестиваля</h2>
+            
+            <div class="program-day">
+                <h3>15 августа, четверг</h3>
+                <table class="program-table">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Событие</th>
+                            <th>Площадка</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10:00 - 11:00</td>
+                            <td>Открытие фестиваля</td>
+                            <td>Главная сцена</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 - 14:00</td>
+                            <td>Начало конкурса граффити</td>
+                            <td>Арт-зона А</td>
+                        </tr>
+                        <tr>
+                            <td>14:00 - 16:00</td>
+                            <td>Мастер-класс "Основы стрит-арта"</td>
+                            <td>Образовательный павильон</td>
+                        </tr>
+                        <tr>
+                            <td>16:00 - 18:00</td>
+                            <td>Живые выступления: локальные группы</td>
+                            <td>Музыкальная сцена</td>
+                        </tr>
+                        <tr>
+                            <td>18:00 - 20:00</td>
+                            <td>Арт-баттл художников</td>
+                            <td>Главная сцена</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="program-day">
+                <h3>16 августа, пятница</h3>
+                <table class="program-table">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Событие</th>
+                            <th>Площадка</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10:00 - 13:00</td>
+                            <td>Продолжение конкурса граффити</td>
+                            <td>Арт-зона Б</td>
+                        </tr>
+                        <tr>
+                            <td>13:00 - 15:00</td>
+                            <td>Воркшоп "Скетчинг для начинающих"</td>
+                            <td>Образовательный павильон</td>
+                        </tr>
+                        <tr>
+                            <td>15:00 - 17:00</td>
+                            <td>Панельная дискуссия "Искусство в городской среде"</td>
+                            <td>Лекторий</td>
+                        </tr>
+                        <tr>
+                            <td>17:00 - 19:00</td>
+                            <td>Выступление диджеев</td>
+                            <td>Музыкальная сцена</td>
+                        </tr>
+                        <tr>
+                            <td>19:00 - 21:00</td>
+                            <td>Кинопоказ документальных фильмов о стрит-арте</td>
+                            <td>Кинозона</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="program-day">
+                <h3>17 августа, суббота</h3>
+                <table class="program-table">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Событие</th>
+                            <th>Площадка</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10:00 - 12:00</td>
+                            <td>Финальный этап конкурса граффити</td>
+                            <td>Арт-зоны А и Б</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 - 14:00</td>
+                            <td>Семейный воркшоп "Рисуем вместе"</td>
+                            <td>Детская зона</td>
+                        </tr>
+                        <tr>
+                            <td>14:00 - 16:00</td>
+                            <td>Выступление приглашенных музыкантов</td>
+                            <td>Главная сцена</td>
+                        </tr>
+                        <tr>
+                            <td>16:00 - 17:00</td>
+                            <td>Церемония награждения победителей</td>
+                            <td>Главная сцена</td>
+                        </tr>
+                        <tr>
+                            <td>17:00 - 19:00</td>
+                            <td>Закрытие фестиваля, фаер-шоу</td>
+                            <td>Все площадки</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Participants Section -->
+    <section id="participants">
+        <div class="container">
+            <h2>Участники</h2>
+            <div class="participants-grid">
+                <div class="participant-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Алексей Ворон" class="participant-img">
+                    <div class="participant-info">
+                        <h3>Алексей Ворон</h3>
+                        <p>Специализируется на крупноформатных муралах с социальным посылом. Работает в технике гиперреализма.</p>
+                    </div>
+                </div>
+                <div class="participant-card">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Мария Граффити" class="participant-img">
+                    <div class="participant-info">
+                        <h3>Мария Граффити</h3>
+                        <p>Создает яркие абстрактные композиции, вдохновленные природой и эмоциями. Использует неоновые цвета.</p>
+                    </div>
+                </div>
+                <div class="participant-card">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Иван Стрит" class="participant-img">
+                    <div class="participant-info">
+                        <h3>Иван Стрит</h3>
+                        <p>Мастер каллиграфити и леттеринга. Создает сложные шрифтовые композиции с элементами иллюстрации.</p>
+                    </div>
+                </div>
+                <div class="participant-card">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Дмитрий Арт" class="participant-img">
+                    <div class="participant-info">
+                        <h3>Дмитрий Арт</h3>
+                        <p>Работает в стиле поп-арт, создавая портреты знаменитостей и культурные отсылки в городской среде.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="#" class="btn btn-secondary">Все участники</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contact-content">
+                <div>
+                    <div class="contact-info">
+                        <h3>Адрес площадки</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Парк Культуры, Центральная аллея, г. Москва</p>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Контактная информация</h3>
+                        <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                        <p><i class="fas fa-envelope"></i> info@graffitivolna.ru</p>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Мы в соцсетях</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    Карта парка Культуры
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">© 2025 ГраффитиВолна</div>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
